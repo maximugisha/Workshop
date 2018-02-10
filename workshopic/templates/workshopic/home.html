@@ -1,0 +1,23 @@
+{% extends 'workshopic/base.html' %}
+{% load staticfiles %}
+{% load event_tags %}
+{% block content %}
+    <h3 class="homeh3">Recently checked In</h3>
+    {% for participant in participants %}
+        <div class="col-md-offset-1">
+            <p>NAME: &nbsp; &nbsp; <a href="{% url 'participant_detail' pk=participant.pk %}">{{ participant.fname }}&nbsp; - &nbsp;{{ participant.lname }}</a></p>
+        </div>
+    {% endfor %}
+    <div class="w3-display-middle">
+        <h3>We're WorkShopic</h3>
+        <p>
+            All Workshops and Participants <strong>Brought Together!</strong>
+        </p>
+    </div>
+    <div class="w3-display-bottom">
+        <h3>We're WorkShopic</h3>
+        <p>
+            All Workshops and Participants <strong>Brought Together!</strong>
+        </p>
+    </div>
+{% endblock %}

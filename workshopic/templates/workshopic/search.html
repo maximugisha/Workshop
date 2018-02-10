@@ -1,0 +1,14 @@
+{% extends 'workshopic/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<h3>Results</h3>
+{% for workshop in workshops %}
+    <div class="col-md-offset-1">
+        <h2>{{ workshop.name }}</h2>
+        <p>LOCATION : &nbsp;{{ workshop.location }}</p>
+        <p>START DATE : &nbsp;{{ workshop.start_date }}</p>
+        <p>END DATE : &nbsp;{{ workshop.end_date }}</p>
+        <p>POSTED AT : &nbsp;{{ workshop.published_date }}</p>
+    </div>
+{% endfor %}
+{% endblock %}

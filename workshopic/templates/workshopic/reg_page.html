@@ -1,0 +1,12 @@
+{% extends 'workshopic/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <h1>Register Here</h1>
+    <div class="col-md-offset-4">
+        <form method="POST" class="form-group">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-primary">Register</button>
+        </form>
+    </div>
+{% endblock %}

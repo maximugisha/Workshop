@@ -1,0 +1,13 @@
+{% extends 'workshopic/base.html' %}
+{% block content %}
+    <h2>All Participants</h2>
+     {% for participant in participants %}
+        <div class="col-md-offset-1">
+            <p><strong>{{ participant.fname }}&nbsp;{{ participant.lname }}</strong> &nbsp; &nbsp; &nbsp; &nbsp; <STRONG>::</STRONG> &nbsp; {{ participant.workshopid }}</p> <hr>
+        </div>
+    {% endfor %}
+
+    <h3>Total Number of Participants: {{ participants.count}}</h3>
+    <p>Total Number of Females: </p>
+    <p>Total Number of Males: </p>
+{% endblock %}

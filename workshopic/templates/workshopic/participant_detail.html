@@ -1,0 +1,22 @@
+{% extends 'workshopic/base.html' %}
+(% load staticfiles %}
+{% block content %}
+    <h1>{{ participant.fname}} - &nbsp;{{ participant.lname}}</h1>
+    <div class="col-md-offset-3">
+        <P>FIRST NAME: </P>{{ participant.fname}}
+        <hr><P>LAST NAME : </P>{{ participant.lname|linebreaksbr }}
+        <hr><P>INSTITUTION : </P>{{ participant.institution}}
+        <hr><P>COUNTRY OF ORIGIN : </P>{{ participant.country}}
+        <hr><P>E-MAIL ADDRESS : </P>{{ participant.email_address}}
+        <hr><P>GENDER : </P>{{ participant.gender}}
+        <hr><P>PHYSICAL ADDRESS : </P>{{ participant.Address}}
+        <hr>
+     {% if participant.reg_date %}
+            <div class="date">
+                <strong>Workshop Attended: &nbsp; </strong>{{ participant.workshopid }}
+                <p>Registered At: &nbsp;{{ participant.reg_date }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}
